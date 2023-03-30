@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head> </head>
+<body>
+    <script>
+
+var _Login = "larissa.lorraine@a.ucb.br";
+var _Senha = "12345";
+
+var L = prompt ("Login");
+var S = prompt ("Senha");
+//verificação de login e senha
+
+if ((_Login == L) && (_Senha == S));{
+    document.write ("login Ok!");
+}
+else {
+    document.write ("Erro");
+}
+
+    </script>
+
+
+</body>
+</html>
