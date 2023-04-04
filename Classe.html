@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+<body>
+
+    <script>
+       /*Implementando a classe retângulo de A e B*/
+
+       class Retangulo{
+        constructor(Base, Altura){
+            this.A = Altura;
+            this.B = Base;
+        }
+calcularArea(){
+    return (this.A * this.B);
+}
+calcularPerimetro(){
+    return (2 * this.A + 2 * this.B);
+} 
+}
+ var Ret1 = new Retangulo (40 , 10);
+ document.write ("A área é igual a... " + Ret1.calcularArea() + "<br>");
+ document.write ("O perímetro é igual a... " + Ret1.calcularPerimetro()+ "<br>");
+
+ var Ret2 = new Retangulo (40 , 10);
+ document.write ("A área é igual a " + Ret2.calcularArea() + "<br>");
+ document.write ("O perímetro é igual a " + Ret2.calcularPerimetro() + "<br>");
+
+ if (Ret1.A == Ret2.A && Ret1.B == Ret2.B) document.write ("os retangulos representam objetos equivalentes.");
+ else document.write("Não são equivalentes.");
+
+ </script>
+</body>
+</html>

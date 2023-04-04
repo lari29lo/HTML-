@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+<body>
+
+    <script>
+        function Converter (){
+            var F = parseFloat(document.getElementById("temperatura").value);
+            var S =  (F - 32) * 5/9;
+            document.getElementById("res").innerHTML = "Em graus Celsius, a temperatura é <b>" + S.toFixed(2) + "</b>.";
+        }
+    </script>
+
+    <p> Temperatura F° </p> 
+    <input type="text" id= "temperatura">
+    <button type="button" onclick="Converter()">Converter</button> <br><br>
+    <p id ="res">Em graus Celsius, a temperatura é... </p>
+
+</body>
+</html>

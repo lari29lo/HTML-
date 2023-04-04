@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+
+    <script>
+        function Soma(){
+            var e1 = parseInt(document.getElementById("v1").value);
+            var e2 = parseInt(document.getElementById("v2").value);
+            var S = e1 + e2;
+            document.getElementById("res").innerHTML = "Resposta: <b><font color = #00FF00>" +  "<b>" +  final + "</b>";
+            document.getElementById("outrasaida").innerHTML = "Resposta: " + S + "." ;
+        }
+    </script>
+
+    <body>
+       <p> Digite dois numeros:</p> 
+        <input type="text" id="v1">
+        <br><br>
+        <input type="text" id="v2">
+        <button type="button" onclick="Soma()">Somar</button> <br><br>
+        <textarea id = "outrasaida" name = "story" rows = "5" cols = "33"></textarea><br><br>
+        <p id="res">Resposta: </p>
+
+    </body>
+</html>
