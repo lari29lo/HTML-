@@ -17,3 +17,8 @@ else {
 
 </body>
 </html>
+
+
+var X = (X > 5) && (X <= 15);
+NOME = prompt ("digite um número");
+document.write (NOME);
