@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    
+<script>
+// EXERCICIO: transcreva o código-fonte em JavaScript que recupera dados do formulário e desenvolve cálculos, classificações e exibição de mensagens
+
+
+// seleciona os elementos do formulário
+const inputPeso = document.getElementById('peso');
+const inputAltura = document.getElementById('altura');
+const botaoCalcular = document.getElementById('botao-calcular');
+const resultado = document.getElementById('resultado');
+
+// adiciona evento de clique ao botão calcular
+botaoCalcular.addEventListener('click', () => {
+
+// recupera os valores do formulário
+  const peso = parseFloat(inputPeso.value);
+  const altura = parseFloat(inputAltura.value);
+
+// verifica se os valores são válidos
+  if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
+    resultado.innerHTML = 'Por favor, informe valores válidos para peso e altura.';
+    return;
+  }
+
+// realiza o cálculo do IMC
+  const imc = peso / (altura * altura);
+
+  // classifica o resultado do IMC
+  let classificacao;
+  if (imc < 18.5) {
+    classificacao = 'Abaixo do peso';
+  } else if (imc < 25) {
+    classificacao = 'Peso normal';
+  } else if (imc < 30) {
+    classificacao = 'Sobrepeso';
+  } else if (imc < 35) {
+    classificacao = 'Obesidade grau 1';
+  } else if (imc < 40) {
+    classificacao = 'Obesidade grau 2';
+  } else {
+    classificacao = 'Obesidade grau 3';
+  }
+
+// exibe o resultado
+  resultado.innerHTML = `Seu IMC é ${imc.toFixed(1)} kg/m² e sua classificação é ${classificacao}.`;
+});
+
+    </script>
+  </body>
+</html>
+

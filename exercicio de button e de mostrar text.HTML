@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head> </head>
+<body> 
+
+    <button type = "button" onclick ="mostraTexto()">Clique para ver o texto</button>
+    <p id = "textoOculto" style="display: none">Ao clicar no botão acima, este texto aparece!</p>
+
+    <script> //EXERCICIO: Escreva o código-fonte de uma página HTML que mostrará o texto “Ao clicar no botão acima, este texto aparece” na página HTML, somente ao clicar no botão “Clique para ver o texto”.
+        function mostraTexto(){
+        var elemento = document.getElementById("textoOculto");
+        elemento.style.display = "block";
+        }
+
+    </script>
+    </body>
+    </html>

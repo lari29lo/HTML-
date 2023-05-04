@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculadora de IMC</title>
+  </head>
+  <body>
+    <h1>Calculadora de IMC</h1>
+    <form>
+      <label for="peso">Informe seu peso (em kg):</label>
+      <input type="number" id="peso" name="peso"><br>
+      <label for="altura">Informe sua altura (em metros):</label>
+      <input type="number" id="altura" name="altura"><br><br>
+      <input type="button" value="Calcular" onclick="calcularIMC()"><br><br>
+      <label for="resultado">Seu IMC é:</label>
+      <input type="text" id="resultado" name="resultado" readonly><br>
+      <label for="classificacao">Classificação:</label>
+      <input type="text" id="classificacao" name="classificacao" readonly>
+    </form>
+    
+    <script> // EXERCICIO: Escreva códigos HTML e JavaScript para a aplicação mostrada na figura a seguir
+      function calcularIMC() {
+        var peso = parseFloat(document.getElementById("peso").value);
+        var altura = parseFloat(document.getElementById("altura").value);
+        var imc = peso / (altura * altura);
+        document.getElementById("resultado").value = imc.toFixed(1);
+        
+        if (imc < 18.5) {
+          document.getElementById("classificacao").value = "Magreza";
+        } else if (imc < 25) {
+          document.getElementById("classificacao").value = "Normal";
+        } else if (imc < 30) {
+          document.getElementById("classificacao").value = "Sobrepeso";
+        } else {
+          document.getElementById("classificacao").value = "Obesidade";
+        }
+      }
+    </script>
+  </body>
+</html>
+
