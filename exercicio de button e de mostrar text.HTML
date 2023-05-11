@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html>
-<head> </head>
-<body> 
-
-    <button type = "button" onclick ="mostraTexto()">Clique para ver o texto</button>
-    <p id = "textoOculto" style="display: none">Ao clicar no botão acima, este texto aparece!</p>
-
+<html lang="en">
+<head> 
+    <meta charset = "UTF-8">
+    <meta http-equiv = "X-UA-compatible" content= "width = device-width, initial-scale = 1.0">
+    
     <script> //EXERCICIO: Escreva o código-fonte de uma página HTML que mostrará o texto “Ao clicar no botão acima, este texto aparece” na página HTML, somente ao clicar no botão “Clique para ver o texto”.
         function mostraTexto(){
-        var elemento = document.getElementById("textoOculto");
-        elemento.style.display = "block";
+        document.getElementById("textoOculto").innerHTML = "Ao clicar no botão acima, este texto aparece!"
         }
-
     </script>
+
+    </head>
+    <body>
+        <button type = "button" onclick ="mostraTexto()">Clique para ver o texto</button>
+        <p id = "textoOculto"></p>
+
     </body>
     </html>
